@@ -1,0 +1,60 @@
+/* Remove any margin or padding that might cause space between slides */
+.swiper-slide img {
+    margin: 0;
+    padding: 0;
+    display: block; /* This ensures the image doesn't have extra space below it */
+    width: 100%; /* This will make the image stretch to the full width of the slide */
+    height: auto; /* This will maintain the aspect ratio of the image */
+  }
+  
+  /* Ensure that padding and borders are included in the element's total width and height */
+  .swiper-slide,
+  .swiper-slide img {
+    box-sizing: border-box;
+  }
+  
+  /* Override Swiper's width calculation if necessary */
+  .swiper-slide {
+    width: auto; /* You might want to adjust this value or remove it depending on your layout */
+  }
+  
+  .swiper-container {
+    position: relative;
+  }
+  
+  .swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Ensure the centering is accurate */
+    z-index: 10; /* Make sure the buttons are above the slides */
+  }
+  
+  .swiper-button-prev {
+    left: 10px; /* Adjust as needed for distance from the left edge */
+  }
+  
+  .swiper-button-next {
+    right: 10px; /* Adjust as needed for distance from the right edge */
+  }
+  
+  .swiper-slide img {
+    /* Existing styles */
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box; /* Include padding and border in the width and height */
+  
+    /* New styles for the frame */
+    padding: 8px; /* Adjust the size of the frame */
+    border: 3px solid #ffffff; /* Adjust the color and size of the border */
+    background-color: #f0f0f0; /* Adjust the background color of the frame */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
+  }
+  
+  .swiper-slide img {
+    width: 100%; /* Image will take the full width of the slide */
+    height: auto; /* Height will be adjusted automatically */
+    object-fit: cover; /* Cover the frame area, may crop the image */
+    object-position: center; /* Center the image within the frame */
+  }
+  

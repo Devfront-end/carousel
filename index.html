@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Carousel</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <!-- ... other head elements ... -->
+</head>
+<body>
+
+<!-- Swiper Carousel -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <!-- Slide with an image -->
+    <div class="swiper-slide">
+      <img src="/img/iStock-1327689563.jpg" alt="Description of image 1">
+    </div>
+    <div class="swiper-slide">
+        <img src="/img/iStock-1435456390.jpg" alt="Description of image 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/iStock-1327689563.jpg" alt="Description of image 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/rsz_capture_d’écran_2024-02-19_à_170439.png" alt="Description of image 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/Screenshot 2024-02-20 at 04.25.40.png" alt="Description of image 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/iStock-1425269537.jpg" alt="Description of image 1">
+      </div>
+    
+    <!-- Repeat the slide for each image -->
+    <!-- ... -->
+  </div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<!-- Initialize Swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.swiper-container', {
+    loop: true,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 'auto',
+    centeredSlides: true,
+  });
+</script>
+
+<script>
+    new Swiper('.swiper-container', {
+      loop: true,
+      spaceBetween: 0, // Controls the space between slides. Set to 0 for no space.
+      slidesPerView: 3, // This will display three slides at a time.
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      centeredSlides: true, // If true, the active slide will be centered, not the leftmost one.
+      // Add other parameters as needed.
+    });
+  </script>
+  
+</body>
+</html>
